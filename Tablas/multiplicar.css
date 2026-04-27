@@ -112,3 +112,35 @@ footer {
         width: 70px;
     }
 }
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#txtNumero {
+    background: #111;
+    color: #00fff7;
+    border: 2px solid #ff00ff;
+    padding: 14px;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    outline: none;
+    box-shadow: 0 0 12px #ff00ff;
+}
+
+#txtNumero::placeholder {
+    color: #00fff7;
+}
+
+@media (max-width: 600px) {
+    .acciones {
+        flex-direction: column;
+    }
+
+    #txtNumero {
+        width: 100%;
+    }
+}
