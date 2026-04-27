@@ -9,11 +9,22 @@
 <body>
 
     <header>
-        <div class="acciones">
-    <input type="text" id="txtNumero" placeholder="Ingrese un número">
-    <button class="btn-probar" onclick="generarTablas()">PROBAR</button>
-        </div>
-    </header>
+    <div class="acciones">
+        <label for="txtNumero">Escribe un número:</label>
+
+        <input 
+            type="text" 
+            id="txtNumero" 
+            placeholder="Ejemplo: 8"
+        >
+
+        <button class="btn-probar" onclick="generarTablas()">GENERAR TABLA</button>
+
+        <p class="ayuda">
+            Ingresa un número y presiona el botón para ver su tabla de multiplicar.
+        </p>
+    </div>
+</header>
 
     <main>
     <section class="card" id="contenedor">

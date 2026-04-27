@@ -1,8 +1,16 @@
 function generarTablas(){
     let contenedor = document.getElementById("contenedor");
 
+    // leer valor del input
+    let numero = parseInt(document.getElementById("txtNumero").value);
+
+    // validación básica
+    if(isNaN(numero)){
+    contenedor.innerHTML = "<h1>Dato inválido</h1><p>Por favor escribe un número para generar la tabla.</p>";
+    return;
+}
+
     let contenido = "";
-    let numero = 5;
 
     contenido += "<h1>Tabla del " + numero + "</h1>";
     contenido += "<table>";

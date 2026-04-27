@@ -144,3 +144,16 @@ footer {
         width: 100%;
     }
 }
+
+.acciones label {
+    color: #ffff00;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ffff00;
+}
+
+.ayuda {
+    color: #ffffff;
+    font-size: 14px;
+    max-width: 400px;
+    text-align: center;
+}
