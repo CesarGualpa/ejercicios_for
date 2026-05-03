@@ -1,29 +1,37 @@
 function generarTablas(){
-    let contenedor = document.getElementById("contenedor");
 
-    // leer valor del input
-    let numero = parseInt(document.getElementById("txtNumero").value);
+    let contenedor;
+    contenedor = document.getElementById("contenedor");
 
-    // validación básica
+    let cmpNumero;
+    cmpNumero = document.getElementById("txtNumero");
+
+    let valorNumero;
+    valorNumero = cmpNumero.value;
+
+    let numero;
+    numero = parseInt(valorNumero);
+
     if(isNaN(numero)){
-    contenedor.innerHTML = "<h1>Dato inválido</h1><p>Por favor escribe un número para generar la tabla.</p>";
-    return;
-}
-
-    let contenido = "";
-
-    contenido += "<h1>Tabla del " + numero + "</h1>";
-    contenido += "<table>";
-    contenido += "<tr><th>Operación</th><th>Resultado</th></tr>";
-
-    for(let i = 1; i <= 10; i++){
-        contenido += "<tr>";
-        contenido += "<td>" + numero + " x " + i + "</td>";
-        contenido += "<td>" + (numero * i) + "</td>";
-        contenido += "</tr>";
+        contenedor.innerHTML = "<h1>Dato inválido</h1><p>Por favor escribe un número para generar la tabla.</p>";
+        return;
     }
 
-    contenido += "</table>";
+    let contenido;
+    contenido = "";
+
+    contenido = contenido + "<h1>Tabla del " + numero + "</h1>";
+    contenido = contenido + "<table>";
+    contenido = contenido + "<tr><th>Operación</th><th>Resultado</th></tr>";
+
+    for(let i = 1; i <= 10; i++){
+        contenido = contenido + "<tr>";
+        contenido = contenido + "<td>" + numero + " x " + i + "</td>";
+        contenido = contenido + "<td>" + (numero * i) + "</td>";
+        contenido = contenido + "</tr>";
+    }
+
+    contenido = contenido + "</table>";
 
     contenedor.innerHTML = contenido;
 }
